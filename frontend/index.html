@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LAN Chat</title>
+
+    <link rel="stylesheet" href="/frontend/style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">💬</div>
+
+            <div>
+                <h1>LAN Chat</h1>
+                <p>Local Network</p>
+            </div>
+        </div>
+
+        <div class="connection-status">
+            <span id="statusDot"></span>
+            <span id="statusText">Disconnected</span>
+        </div>
+
+        <div class="online-section">
+
+            <div class="online-title">
+                <span>Online Users</span>
+                <span id="userCount">0</span>
+            </div>
+
+            <div id="userList" class="user-list"></div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Main Chat -->
+    <main class="chat">
+
+        <header class="chat-header">
+
+            <div>
+                <h2>Network Chat</h2>
+                <p>Messages are shared over your local network.</p>
+            </div>
+
+            <div class="network-badge">
+                ● LAN
+            </div>
+
+        </header>
+
+
+        <section id="messages" class="messages">
+
+            <div class="welcome-message">
+
+                <div class="welcome-icon">
+                    💬
+                </div>
+
+                <h2>Welcome to LAN Chat</h2>
+
+                <p>
+                    Connect with people on the same local network.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <form id="messageForm" class="message-form">
+
+            <input
+                type="text"
+                id="messageInput"
+                placeholder="Type your message..."
+                maxlength="500"
+                autocomplete="off"
+                disabled
+            >
+
+            <button
+                type="submit"
+                id="sendButton"
+                disabled
+            >
+                Send
+            </button>
+
+        </form>
+
+    </main>
+
+</div>
+
+
+<!-- Login Modal -->
+
+<div id="loginModal" class="modal">
+
+    <div class="login-card">
+
+        <div class="login-icon">
+            💬
+        </div>
+
+        <h2>Welcome to LAN Chat</h2>
+
+        <p>
+            Choose a username to join the network.
+        </p>
+
+        <form id="loginForm">
+
+            <input
+                type="text"
+                id="usernameInput"
+                placeholder="Enter username"
+                maxlength="30"
+                autocomplete="off"
+                required
+            >
+
+            <button type="submit">
+                Join Chat
+            </button>
+
+        </form>
+
+        <p id="loginError" class="login-error"></p>
+
+    </div>
+
+</div>
+
+
+<script src="/frontend/app.js"></script>
+
+</body>
+</html>
